@@ -16,11 +16,11 @@ class WalkThrough2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNavigationHidden()
+        self.navigationController?.isNavigationBarHidden = true
         setBottomView()
-        customButtonWithGradientColor(button: nxtBtn, label: "GET STARTED",textSize: 15)
+        view.customButtonWithGradientColor(button: nxtBtn, label: BtnConstant.getStarted,textSize: 15)
         setPageControl()
-        setLabelText(lblrefrence: lblMovie, lbltext: "Movie experience for every mood", fontSize: 25)
+        view.setLabelText(lblrefrence: lblMovie, lbltext: TxtConstant.title2, fontSize: 25)
     }
     
     func setPageControl(){
@@ -45,7 +45,7 @@ class WalkThrough2: UIViewController {
     }
     
     @IBAction func onNextBtn(_ sender: UIButton) {
-        navigationController?.pushViewController(loginVc(nibName: "loginVc", bundle: nil), animated: true)
+        navigationController?.pushViewController(loginVc(nibName: Nibname.loginVc, bundle: nil), animated: true)
     }
     
 }

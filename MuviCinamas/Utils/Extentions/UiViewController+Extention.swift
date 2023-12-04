@@ -8,16 +8,16 @@
 import Foundation
 import UIKit
 
-extension UIViewController{
-    func customButtonWithGradientColor( button : UIButton,label:String ,textSize : Int = 18, gradColor1 : UIColor = GradientColor.redcolor , gradColor2: UIColor = GradientColor.bluecolor,btnTextColor:UIColor = GradientColor.whitecolor){
+extension UIView{
+    func customButtonWithGradientColor( button : UIButton,label:String ,textSize : Int = 18, gradColor1 : UIColor = GradientColor.redcolor , gradColor2: UIColor = GradientColor.bluecolor,btnTextColor:UIColor = colorConstant.whitecolor){
         
         // MARK: APPLYING GRADIENT COLOR
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = button.bounds
-        gradientLayer.colors = [gradColor1.cgColor,gradColor2.cgColor]
+        gradientLayer.colors = [gradColor2.cgColor,gradColor1.cgColor]
         gradientLayer.locations = [0.0,1.0]
         gradientLayer.startPoint = CGPoint(x: 1, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 0, y: 1)
+        gradientLayer.endPoint = CGPoint(x: 0, y: 0)
         button.layer.addSublayer(gradientLayer)
         
         // MARK: APPLYING CORNER RADIUS
@@ -35,16 +35,17 @@ extension UIViewController{
         
     }
     
-    func setButtonText(button:UIButton,label:String,color:UIColor = GradientColor
-        .blackcolor,size:Int,font_Family:String = "Barlow-Regular",isbold:Bool = false){
+    func setButtonText(button:UIButton,label:String,color:UIColor = colorConstant
+        .blackcolor,size:Int,font_Family:String = BarlowFont.regular ,isbold:Bool = false , borderColor : UIColor = UIColor.clear){
             
             var attributes: [NSAttributedString.Key: Any] = [
                 .foregroundColor: color
             ]
             
-            attributes[.font] = isbold ? UIFont(name: "Barlow-Bold", size: CGFloat(size)) : UIFont(name: font_Family, size: CGFloat(size))
+            attributes[.font] = isbold ? UIFont(name: BarlowFont.bold, size: CGFloat(size)) : UIFont(name: font_Family, size: CGFloat(size))
             
             let attributedText = NSAttributedString(string: label, attributes: attributes)
+            button.layer.borderColor = borderColor.cgColor
             button.setAttributedTitle(attributedText, for: .normal)
         }
     
@@ -55,15 +56,12 @@ extension UIViewController{
         lblrefrence.textAlignment = .center
     }
     
-    func setNavigationHidden(){
-        self.navigationController?.isNavigationBarHidden = true
-    }
     
     func setImageOnButton(button:UIButton,name:String){
         let image = UIImage(named: name)
         button.setBackgroundImage(image, for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
-        
     }
+    
     
 }

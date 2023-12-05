@@ -12,7 +12,7 @@
             <connections>
                 <outlet property="bottomView" destination="Ra3-SN-tNi" id="yBc-2H-LWh"/>
                 <outlet property="collectionView" destination="4Kl-4z-QHu" id="sq4-As-Krp"/>
-                <outlet property="nxtBtn" destination="i1M-lS-kvX" id="512-pc-iWn"/>
+                <outlet property="nxtBtn" destination="i1M-lS-kvX" id="ake-DS-cHE"/>
                 <outlet property="pageControl" destination="Ho8-8T-r3m" id="hEZ-zd-gyU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -33,7 +33,7 @@
                             </constraints>
                         </imageView>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4Kl-4z-QHu">
-                            <rect key="frame" x="0.0" y="201.99999999999997" width="393" height="309.33333333333326"/>
+                            <rect key="frame" x="0.0" y="181.99999999999997" width="393" height="329.33333333333326"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZXC-mQ-Ivs">
                                 <size key="itemSize" width="128" height="128"/>
@@ -46,6 +46,9 @@
                             <rect key="frame" x="282" y="431.33333333333331" width="75" height="35"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                            <connections>
+                                <action selector="onNextBtn:" destination="-1" eventType="touchUpInside" id="8JH-Ai-UA5"/>
+                            </connections>
                         </button>
                         <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="Ho8-8T-r3m">
                             <rect key="frame" x="0.0" y="435.99999999999994" width="98.666666666666671" height="26"/>
@@ -63,7 +66,7 @@
                         <constraint firstItem="Ho8-8T-r3m" firstAttribute="centerY" secondItem="i1M-lS-kvX" secondAttribute="centerY" id="Soq-7Z-ySL"/>
                         <constraint firstAttribute="trailing" secondItem="i1M-lS-kvX" secondAttribute="trailing" constant="36" id="ai0-TA-Ary"/>
                         <constraint firstItem="4Kl-4z-QHu" firstAttribute="leading" secondItem="Ra3-SN-tNi" secondAttribute="leading" id="eoD-P1-g1A"/>
-                        <constraint firstItem="4Kl-4z-QHu" firstAttribute="top" secondItem="Chn-QK-6bW" secondAttribute="bottom" constant="40" id="lfc-L5-6EZ"/>
+                        <constraint firstItem="4Kl-4z-QHu" firstAttribute="top" secondItem="Chn-QK-6bW" secondAttribute="bottom" constant="20" id="lfc-L5-6EZ"/>
                         <constraint firstAttribute="bottom" secondItem="4Kl-4z-QHu" secondAttribute="bottom" id="vkm-E7-LZl"/>
                     </constraints>
                 </view>

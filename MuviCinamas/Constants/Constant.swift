@@ -24,6 +24,7 @@ struct colorConstant{
 struct BarlowFont{
     static var regular = "Barlow-Regular"
     static var bold = "Barlow-Bold"
+    static var thin = "Barlow-Thin"
 }
 
 
@@ -41,6 +42,11 @@ struct TxtConstant{
     
     // for Login
     static var It_easier_to_sign_in_now = "It’s easier to sign in now"
+    
+    // for userpreference page
+    
+    static var do_you_have_any_preference_of_movies = "Do you have any \n preference of movies?"
+    static var i_like_all_types_of_movies = "I like all types of movies"
 }
 
 
@@ -57,6 +63,10 @@ struct BtnConstant{
     static var signup = "Sign Up"
     static var register_with_Mobile = "Register with Mobile"
     static var continue_without_login = "Continue without login"
+    
+    // for user prefrence screen
+    
+    static var all = "  ALL  "
     
 }
 
@@ -77,4 +87,10 @@ struct Nibname{
     static var WalkThrough2 = "WalkThrough2"
     static var walkThroughCells = "walkThroughCells"
     static var loginVc = "loginVc"
+}
+
+
+struct cellsNameConstant{
+    static var walkThroughCells = "walkThroughCells"
+    static var tagCell = "tagCell"
 }

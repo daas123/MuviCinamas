@@ -16,7 +16,7 @@ class WalkThrough1: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBottomView()
+        view.setBottomView(botmView: bottomView)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.delegate = self
         collectionView.dataSource  = self
@@ -29,25 +29,7 @@ class WalkThrough1: UIViewController {
     func setPageControl(){
         self.pageControl.currentPage = 0
     }
-    
-    func setBottomView(){
-        
-        let path = UIBezierPath()
-        path.move(to: CGPoint(x: 0, y: bottomView.frame.height))
-        path.addLine(to: CGPoint(x: bottomView.frame.width, y: bottomView.frame.height))
-        path.addLine(to: CGPoint(x: bottomView.frame.width, y: 60))
-        path.addLine(to: CGPoint(x: 0, y: 60))
-        path.move(to: CGPoint(x: 0, y: 60))
-        path.addQuadCurve(to: CGPoint(x: bottomView.frame.width, y: 60), controlPoint: CGPoint(x: bottomView.frame.width / 2 , y: 0 ))
-        path.close()
-
-        let shapeLayer = CAShapeLayer()
-        shapeLayer.path = path.cgPath
-        
-        bottomView.layer.mask = shapeLayer
-    }
-    
-    
+ 
     
     @IBAction func onNextBtn(_ sender: UIButton) {
         if self.pageControl.currentPage == 1{

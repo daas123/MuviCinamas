@@ -14,5 +14,7 @@ struct WalkthroughDetails{
 
 let walkthroughtData = [
     WalkthroughDetails(title: "Movie experience for every mood", pagint: 0, btntext: "NEXT"),
-    WalkthroughDetails(title: "Smooth & enjoyable Experience", pagint: 1, btntext: "GET STARTED "),
+    WalkthroughDetails(title: "Smooth & enjoyable \n Experience", pagint: 1, btntext: "GET STARTED "),
 ]
+
+let userPreferences = ["DRAMA","HORROR","ACTION","ADVENTURE","ROMANTIC","COMEDY","CRIME","SCI-FI","CLASSIC","BIOGRAPHY","KIDS","THRILLER","FAMILY","3D","ANIMATION"]

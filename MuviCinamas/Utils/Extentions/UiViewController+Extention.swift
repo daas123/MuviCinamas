@@ -63,5 +63,29 @@ extension UIView{
         button.imageView?.contentMode = .scaleAspectFit
     }
     
+    func setBottomView(botmView:UIView){
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: 0, y: botmView.frame.height))
+        path.addLine(to: CGPoint(x: botmView.frame.width, y: botmView.frame.height))
+        path.addLine(to: CGPoint(x: botmView.frame.width, y: 60))
+        path.addLine(to: CGPoint(x: 0, y: 60))
+        path.move(to: CGPoint(x: 0, y: 60))
+        path.addQuadCurve(to: CGPoint(x: botmView.frame.width, y: 60), controlPoint: CGPoint(x: botmView.frame.width / 2 , y: 0 ))
+        path.close()
+
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = path.cgPath
+        
+        botmView.layer.mask = shapeLayer
+    }
+    
+    func buttonWithCornerradius_Transperent(btn:UIButton,borderColor : UIColor){
+        btn.clipsToBounds = true
+        btn.layer.cornerRadius = 20
+        btn.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMinYCorner]
+        btn.layer.borderColor = borderColor.cgColor
+        btn.layer.borderWidth = 1
+    }
+    
     
 }

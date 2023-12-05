@@ -20,6 +20,7 @@ class loginVc: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         setimagesOnButton()
         setTextOnButtons()
         setlabelsText()
@@ -37,11 +38,7 @@ class loginVc: UIViewController {
         
         //MARK: Text Register button
         view.setButtonText(button: btnregisterWithMobile, label: BtnConstant.register_with_Mobile,color: colorConstant.lightGray, size: 19)
-        btnregisterWithMobile.clipsToBounds = true
-        btnregisterWithMobile.layer.cornerRadius = 20
-        btnregisterWithMobile.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMinYCorner]
-        btnregisterWithMobile.layer.borderColor = colorConstant.blackcolor.cgColor
-        btnregisterWithMobile.layer.borderWidth = 1
+        view.buttonWithCornerradius_Transperent(btn: btnregisterWithMobile, borderColor:colorConstant.blackcolor )
         
         //MARK: Text without Register button
         view.setButtonText(button: btnCountinueWithOutLogin, label: BtnConstant.continue_without_login,color: colorConstant.whitecolor, size: 18)

@@ -19,6 +19,8 @@
 		9272EE692B188D5100E56C50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9272EE682B188D5100E56C50 /* Assets.xcassets */; };
 		9272EE6C2B188D5100E56C50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9272EE6A2B188D5100E56C50 /* LaunchScreen.storyboard */; };
 		9272EE742B18C48E00E56C50 /* UiViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272EE732B18C48E00E56C50 /* UiViewController+Extention.swift */; };
+		929E2BA32B1EF11A0073EBEB /* tagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E2BA12B1EF11A0073EBEB /* tagCell.swift */; };
+		929E2BA42B1EF11A0073EBEB /* tagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929E2BA22B1EF11A0073EBEB /* tagCell.xib */; };
 		92A693D42B199E9500433795 /* WalkThrough1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A693D22B199E9500433795 /* WalkThrough1.swift */; };
 		92A693D52B199E9500433795 /* WalkThrough1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92A693D32B199E9500433795 /* WalkThrough1.xib */; };
 		92A693D82B199EBA00433795 /* WalkThrough2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A693D62B199EBA00433795 /* WalkThrough2.swift */; };
@@ -61,6 +63,8 @@
 		9272EE6B2B188D5100E56C50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9272EE6D2B188D5100E56C50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9272EE732B18C48E00E56C50 /* UiViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController+Extention.swift"; sourceTree = "<group>"; };
+		929E2BA12B1EF11A0073EBEB /* tagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tagCell.swift; sourceTree = "<group>"; };
+		929E2BA22B1EF11A0073EBEB /* tagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tagCell.xib; sourceTree = "<group>"; };
 		92A693D22B199E9500433795 /* WalkThrough1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThrough1.swift; sourceTree = "<group>"; };
 		92A693D32B199E9500433795 /* WalkThrough1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalkThrough1.xib; sourceTree = "<group>"; };
 		92A693D62B199EBA00433795 /* WalkThrough2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThrough2.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 		926FDF812B1DF14200C95E49 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				929E2BA02B1EF0F40073EBEB /* Cells */,
 				926FDF842B1DF18600C95E49 /* UserPreferenceVC.swift */,
 				926FDF852B1DF18600C95E49 /* UserPreferenceVC.xib */,
 			);
@@ -169,6 +174,15 @@
 				9272EE6D2B188D5100E56C50 /* Info.plist */,
 			);
 			path = MuviCinamas;
+			sourceTree = "<group>";
+		};
+		929E2BA02B1EF0F40073EBEB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				929E2BA12B1EF11A0073EBEB /* tagCell.swift */,
+				929E2BA22B1EF11A0073EBEB /* tagCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		92A693CB2B199C4700433795 /* Utils */ = {
@@ -355,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				926FDF872B1DF18700C95E49 /* UserPreferenceVC.xib in Resources */,
+				929E2BA42B1EF11A0073EBEB /* tagCell.xib in Resources */,
 				92A693D92B199EBB00433795 /* WalkThrough2.xib in Resources */,
 				92A693FE2B19BCA300433795 /* Barlow-Thin.ttf in Resources */,
 				92A693FD2B19BCA300433795 /* Barlow-ExtraLight.ttf in Resources */,
@@ -394,6 +409,7 @@
 				92A694132B19F01800433795 /* loginVc.swift in Sources */,
 				9272EE642B188D4C00E56C50 /* ViewController.swift in Sources */,
 				92A693D42B199E9500433795 /* WalkThrough1.swift in Sources */,
+				929E2BA32B1EF11A0073EBEB /* tagCell.swift in Sources */,
 				9272EE602B188D4C00E56C50 /* AppDelegate.swift in Sources */,
 				926FDF7F2B1DC83800C95E49 /* ConstantData.swift in Sources */,
 				926FDF7C2B1DC66800C95E49 /* walkThroughCells.swift in Sources */,
